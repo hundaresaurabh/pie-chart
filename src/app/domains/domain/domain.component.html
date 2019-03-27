@@ -1,0 +1,12 @@
+<div>
+  <form style="width:30%">
+    <mat-select>
+      <mat-option *ngFor="let food of foods">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </form>
+</div>
+<span routerLink="/domains/domain1">domain1</span>
+<span routerLink="/domains/domain2">domain2</span>
+<router-outlet></router-outlet>
