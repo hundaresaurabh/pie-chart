@@ -11,11 +11,11 @@ const routes: Routes = [
     children:[
       {
         path:'domain1',
-        component:Domain1Component
+        component:Domain2Component
       },
       {
         path:'domain2',
-        component:Domain2Component
+        component:Domain1Component
       }
     ]
   },

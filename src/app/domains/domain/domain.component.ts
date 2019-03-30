@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-domain',
@@ -6,15 +8,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./domain.component.scss']
 })
 export class DomainComponent implements OnInit {
-  foods = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
+  domainForm: FormGroup;
+  domains = [
+    {value: 'domain-1', viewValue: 'Domain1'},
+    {value: 'domain-2', viewValue: 'Domain2'},
   ];
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder,
+    private router:Router) {
+    this.domainForm = this.formBuilder.group({
+      selectDomain : ['', Validators.required]
+    });
+   }
 
   ngOnInit() {
+  }
+
+  getDomain(value){
+    console.log(value);
+    
+    if(value === 'domain-1'){
+      this.router.navigateByUrl('domains/domain1');
+    }else{
+      this.router.navigateByUrl('domains/domain2');
+    }
   }
 
 }

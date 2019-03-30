@@ -1,12 +1,13 @@
 <div>
-  <form style="width:30%">
-    <mat-select>
-      <mat-option *ngFor="let food of foods">
-        {{food.viewValue}}
-      </mat-option>
-    </mat-select>
+  <form style="width:30%" [formGroup]="domainForm">
+      <mat-form-field>
+          <mat-label>Select Domain</mat-label>
+          <mat-select formControlName="selectDomain" >
+            <mat-option *ngFor="let domain of domains" [value]="domain.value" (click)="getDomain(domain.value)">
+              {{domain.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
   </form>
 </div>
-<span routerLink="/domains/domain1">domain1</span>
-<span routerLink="/domains/domain2">domain2</span>
 <router-outlet></router-outlet>

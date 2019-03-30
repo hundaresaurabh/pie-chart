@@ -1,3 +1,14 @@
-<p>
-  domain2 works!
-</p>
+<div>
+  <div style="display: block">
+    <canvas baseChart [datasets]="chartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+      [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend"
+      (chartClick)="chartClicked($event)">
+    </canvas>
+  </div>
+</div>
+<div *ngIf="showTable">
+  <app-domain-table [tableOneData]="tableOneData" (userData)="userData($event)"></app-domain-table>
+</div>
+<div *ngIf="showUserDetails">
+  <app-user-table [userDetails]="userDetails"></app-user-table>
+</div>
