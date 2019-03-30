@@ -11,4 +11,8 @@
     color: #fff;
     justify-content: center;
     display: flex;
+    outline: none;
+}
+.sidebar span:focus{
+    outline: none!important;
 }

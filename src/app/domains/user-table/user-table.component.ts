@@ -13,8 +13,6 @@ export class UserTableComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(){
-    console.log('user table**********',this.userDetails);
-
   }
 
 }

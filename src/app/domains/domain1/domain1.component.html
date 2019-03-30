@@ -14,6 +14,6 @@
 <div *ngIf="showTable">
   <app-domain-table [tableOneData]="tableOneData" (userData)="userData($event)"></app-domain-table>
 </div>
-<div *ngIf="showUserDetails">
+<div *ngIf="showUserDetails" style="margin-top:3%">
   <app-user-table [userDetails]="userDetails"></app-user-table>
 </div>

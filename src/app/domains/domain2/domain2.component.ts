@@ -14,6 +14,13 @@ export class Domain2Component implements OnInit {
   userDetails;
   showUserDetails: boolean = false;
 
+
+  /**
+   *Barchart required data
+   *
+   * @type {ChartOptions}
+   * @memberof Domain2Component
+   */
   public pieChartOptions: ChartOptions = {
     responsive: true,
     plugins: {
@@ -42,6 +49,12 @@ export class Domain2Component implements OnInit {
   }
 
 
+  /**
+   *functional use-
+   * When user click on chart to show a table with respect to data
+   * @param {*} event
+   * @memberof Domain2Component
+   */
   chartClicked(event) {
     this.chartData.forEach((element, index) => {
       if(index === event.active[0]._datasetIndex){
@@ -53,6 +66,13 @@ export class Domain2Component implements OnInit {
     });
   }
 
+
+  /**
+   *functional use-
+   * to pass data to user details component
+   * @param {*} event
+   * @memberof Domain2Component
+   */
   userData(event){
     this.userDetails = event;
     this.showUserDetails = true;

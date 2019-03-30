@@ -25,8 +25,6 @@ export class DomainComponent implements OnInit {
   }
 
   getDomain(value){
-    console.log(value);
-    
     if(value === 'domain-1'){
       this.router.navigateByUrl('domains/domain1');
     }else{

@@ -12,12 +12,9 @@ export class DomainTableComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.tableOneData);
-    
   }
 
   showUserTable(user:any){
-    console.log('user', user);
     this.userData.emit(user.chat);
   }
 
